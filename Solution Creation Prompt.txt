@@ -1,1 +1,51 @@
-test
+I want you to act as a senior backend engineer to create a Car Listing App that runs on the local machine. The app lets the user to input a car description, upload one image, then a button (send) will help in extacting structured JSON from the text and identify the body_shape from the image via the cv_classifier dummy function. Moreover, it merges the results and displays the JSON, also it allows to download and emails both JSON and image to specified email address. Please, prioritizing clean code, strict schemas and minimal token usage is a must.
+
+Requirements: (Mandatory)
+
+A) The Tech Stack
+1. Streamlit for the GUI
+2. Use Langchain to deal with the Azure OpenAi endpoint
+3. Use pyantic for strict schema validation
+4. Utilize Gmail API
+5. Create a python.env for the config and avoid hard coded vars
+
+B) The Web page of Streamlit
+1. Create a text area to add the user's text
+2. Create a file uploader for just one image
+3. create a "Send" button that does the following:
+	a. sanitize text (To avoid jailbreak or "forget previous instructions)
+	b. Call the OpenAi API to extract JSON and use Pydantic to make sure strict schema and righteous parsing
+	c. Do some post process of the JSON. e.g: if there are 1M it should be 1000000
+	d. Make sure to merge the body_shape extracted from the image to the JSON
+	e. Preview the JSON, allow to download it
+	f. send the email to the specified email in .env using Gmail API
+
+c) Model and Tokens
+1. use These creds to access the model:
+	Deployment Name
+	Deployment Endpoint
+	Azure OpenAI Key
+2. make the temperature=0 to reduce model randomness and the max num of tokens can't exceed 250
+3. Make one repair pass if Pydantic parse fails
+4. Make a strict system prompt that forces the model to behave properly
+
+d) Pydantic Schema
+	1. Car Object
+		body_type: Car body style (from image classification)
+		color: Car color
+		brand: Car manufacturer
+		model: Car model name
+		manufactured_year: Year of manufacture (1950-2100)
+		motor_size_cc: Engine size in cubic centimeters
+		tires: Tire information (type, manufactured year)
+		windows: Window type ("tinted", "electrical", "manual", "none")
+		notices: Array of damage/accident notices
+		price OR estimated_price: Price information (amount, currency)
+
+e) Business Rules
+	1. Currency is normalized to "L.E" for Egyptian pounds
+	2. Engine sizes are converted from liters to CC (e.g., "2.0-liter" → 2000)
+	3. Price amounts are converted to integers (e.g., "1 million" → 1000000)
+	4. Window types are standardized using synonym mapping
+	5. Only one price field is kept based on description wording
+
