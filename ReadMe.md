@@ -193,3 +193,7 @@ The application extracts the following car information:
 - **Image Processing**: Graceful handling of invalid/corrupted images  
 - **Email Failures**: Clear error messages for authentication/sending issues
 - **Prompt Injection**: Sanitization prevents malicious input manipulation
+
+## Solution Design Diagram
+
+![Solution Design Diagram](./docs/images/Orion_Solution_Diagram.png)
