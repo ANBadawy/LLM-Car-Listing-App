@@ -52,6 +52,7 @@ source env/bin/activate
 3. **Install required packages**:
 ```bash
 pip install -r requirements.txt
+cd car-listing-app
 ```
 
 
