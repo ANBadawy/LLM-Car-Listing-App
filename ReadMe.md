@@ -4,8 +4,7 @@ A Streamlit-based application that extracts structured car information from text
 
 ### Explanation Video
 
-Watch the explanation video here: <https://drive.google.com/file/d/1Gi6yzN9ocDykcBMTbKtWw8IDEXOTd6Sw/view>
-
+Watch the explanation video here:  [Explanation Video](https://drive.google.com/file/d/1Gi6yzN9ocDykcBMTbKtWw8IDEXOTd6Sw/view?usp=drive)
 
 ## How It Works
 
