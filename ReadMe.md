@@ -3,7 +3,7 @@
 A Streamlit-based application that extracts structured car information from text descriptions and images, then automatically emails the results as JSON with image attachments.
 
 ### Explanation Video
-Watch the explanation video here:  [Explanation Video](https://drive.google.com/file/d/1Gi6yzN9ocDykcBMTbKtWw8IDEXOTd6Sw/view?usp=sharing)
+Watch the explanation video here: [Explanation Video](https://drive.google.com/file/d/1O2YWf3Dx-jaFfiCSxMBWBw6LeK-P3aI6/view?usp=drive_link)
 
 ## How It Works
 
