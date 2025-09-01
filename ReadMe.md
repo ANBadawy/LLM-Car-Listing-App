@@ -200,4 +200,4 @@ The application extracts the following car information:
 
 ## Solution Design Diagram
 
-![Solution Design Diagram](./Orion_Solution_Diagram.png)
+![Solution Design Diagram](./Solution_Diagram.png)
